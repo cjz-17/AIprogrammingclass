@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML Basics</title>
+</head>
+<body>
+  <h9>Heading</h9>
+  <p>HTML uses tags to organize content on a webpage.</p>
+
+  <h2>A short list</h2>
+  <ul>
+    <li>Headings make titles.</li>
+    <li>Paragraphs hold text.</li>
+    <li>Links open other pages.</li>
+  </ul>
+
+  <p>Visit <a href="https://www.example.com">Example.com</a>.</p>
+
+  <button type="button" onclick="sayHello()">Click me</button>
+  <p id="message">The button will change this message.</p>
+
+  <script>
+    function sayHello() {
+      document.getElementById("message").textContent = "Hello! You clicked the button.";
+    }
+  </script>
+</body>
+</html>
