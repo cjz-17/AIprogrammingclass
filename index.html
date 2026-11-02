@@ -3,28 +3,64 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HTML Basics</title>
+  <meta name="theme-color" content="#f5f5f0">
+  <meta name="description" content="IB Deadline Board helps IB Diploma students studying at SEK-Ciudalcampo organize their studies, extra activities, and tasks.">
+  <title>IB Deadline Board</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
-  <h9>Heading</h9>
-  <p>HTML uses tags to organize content on a webpage.</p>
+<body class="min-h-screen bg-stone-50 text-stone-900 antialiased">
+  <div class="mx-auto max-w-5xl px-5 sm:px-8">
+    <header class="flex flex-col gap-3 border-b border-stone-200 py-6 sm:flex-row sm:items-center sm:justify-between">
+      <a class="flex w-fit items-center gap-3 font-semibold tracking-tight text-stone-900 no-underline" href="#top">
+        <span class="grid size-9 place-items-center rounded-xl bg-emerald-800 text-lg text-white" aria-hidden="true">✓</span>
+        <span>IB Deadline Board</span>
+      </a>
+      <p class="m-0 text-sm leading-relaxed text-stone-600 sm:text-right">For IB Diploma students studying at SEK-Ciudalcampo.</p>
+    </header>
 
-  <h2>A short list</h2>
-  <ul>
-    <li>Headings make titles.</li>
-    <li>Paragraphs hold text.</li>
-    <li>Links open other pages.</li>
-  </ul>
+    <main id="top">
+      <section aria-labelledby="problem-title" class="grid gap-8 py-14 sm:py-20">
+        <div class="max-w-3xl">
+          <p class="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-emerald-800">The problem</p>
+          <h1 id="problem-title" class="m-0 font-serif text-4xl font-medium leading-tight tracking-tight text-stone-900 sm:text-6xl">
+            Every week, students have to search different chats and documents to keep track of upcoming IA, CAS, and exam deadlines.
+          </h1>
+        </div>
+      </section>
 
-  <p>Visit <a href="https://www.example.com">Example.com</a>.</p>
+      <section aria-labelledby="features-title" class="pb-8">
+        <div class="mb-6">
+          <p class="mb-2 text-xs font-bold uppercase tracking-[0.16em] text-emerald-800">The features</p>
+          <h2 id="features-title" class="m-0 font-serif text-3xl font-medium tracking-tight sm:text-4xl">Organize your IB life.</h2>
+        </div>
 
-  <button type="button" onclick="sayHello()">Click me</button>
-  <p id="message">The button will change this message.</p>
+        <div class="grid gap-4 sm:grid-cols-3">
+          <article id="feature-studies" class="rounded-2xl border border-emerald-200 bg-emerald-50 p-6 sm:min-h-52">
+            <span class="mb-8 grid size-9 place-items-center rounded-xl bg-white text-sm font-bold text-emerald-800">01</span>
+            <h3 class="m-0 text-lg font-semibold tracking-tight">Organize your studies</h3>
+          </article>
+          <article class="rounded-2xl border border-stone-200 bg-white p-6 sm:min-h-52">
+            <span class="mb-8 grid size-9 place-items-center rounded-xl bg-stone-100 text-sm font-bold text-emerald-800">02</span>
+            <h3 class="m-0 text-lg font-semibold tracking-tight">Organize extra activities</h3>
+          </article>
+          <article class="rounded-2xl border border-stone-200 bg-white p-6 sm:min-h-52">
+            <span class="mb-8 grid size-9 place-items-center rounded-xl bg-stone-100 text-sm font-bold text-emerald-800">03</span>
+            <h3 class="m-0 text-lg font-semibold tracking-tight">Organize tasks</h3>
+          </article>
+        </div>
+      </section>
 
-  <script>
-    function sayHello() {
-      document.getElementById("message").textContent = "Hello! You clicked the button.";
-    }
-  </script>
+      <div class="flex justify-center py-8 sm:py-10">
+        <a href="#feature-studies" class="inline-flex min-h-14 w-full items-center justify-center gap-3 rounded-xl bg-emerald-800 px-7 py-4 text-center text-base font-semibold text-white no-underline shadow-lg shadow-emerald-950/10 transition hover:-translate-y-0.5 hover:bg-emerald-900 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-500 sm:w-auto">
+          Organize your studies
+          <span aria-hidden="true" class="text-xl">↗</span>
+        </a>
+      </div>
+    </main>
+
+    <footer class="border-t border-stone-200 py-6 text-sm font-medium text-emerald-900">
+      Made by Kevin at Build &amp; Ship
+    </footer>
+  </div>
 </body>
 </html>
